@@ -1,0 +1,74 @@
+# =========================
+# 🔹 Python / PyCharm
+# =========================
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# PyCharm
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# SQLite
+*.sqlite3
+
+# Migrations (опционально, если не хочешь пушить)
+# */migrations/
+# !*/migrations/__init__.py
+
+# =========================
+# 🔹 Node / React
+# =========================
+
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache
+.cache/
+.next/
+.vite/
+
+# =========================
+# 🔹 OS files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🔹 Misc
+# =========================
+
+coverage/
+*.coverage
+htmlcov/
