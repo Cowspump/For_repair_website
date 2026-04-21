@@ -146,6 +146,17 @@ function App() {
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [mobileOpen])
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileOpen])
+
   return (
     <div className="app">
       <header className="nav" data-scrolled={progress > 0.02 ? 'true' : 'false'}>

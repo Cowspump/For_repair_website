@@ -156,6 +156,14 @@
   padding: 0;
   margin: 0;
   background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.nav__mobile[data-open='true'] .nav__mobileBackdrop {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .nav__mobilePanel {
@@ -386,6 +394,10 @@
   background: rgb(182, 217, 54);
   color: rgb(13, 13, 13);
   border-color: transparent;
+}
+
+.section--reviews {
+  text-align: center;
 }
 
 .button--reviews {
@@ -921,13 +933,17 @@
 @media (max-width: 809.98px) {
   .nav {
     justify-content: space-between;
-    padding: 10px 12px;
+    padding: 10px max(12px, env(safe-area-inset-right)) 10px max(12px, env(safe-area-inset-left));
   }
   .nav__pill {
     display: none;
   }
   .nav__menuButton {
     display: inline-flex;
+  }
+  .nav__mobilePanel {
+    left: max(12px, env(safe-area-inset-left));
+    right: max(12px, env(safe-area-inset-right));
   }
   .hero {
     padding-top: 108px;
@@ -1003,6 +1019,7 @@
   .hero {
     padding-top: 96px;
     min-height: 92svh;
+    padding-bottom: 40px;
   }
 
   .hero__title {
@@ -1078,5 +1095,33 @@
     border-radius: 16px;
     padding: 16px 14px;
     font-size: 16px;
+  }
+
+  .section__heading {
+    margin-bottom: 22px;
+  }
+
+  .aboutStats {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutCard {
+    padding: 20px;
+  }
+
+  .whyCard {
+    padding: 18px;
+  }
+
+  .reviewCard {
+    padding: 14px;
+  }
+
+  .footer__headline {
+    padding: 22px;
+  }
+
+  .footer__form .button {
+    width: 100%;
   }
 }
