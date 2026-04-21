@@ -6,7 +6,7 @@
 .page {
   width: min(1400px, 100%);
   margin: 0 auto;
-  padding: 0 40px 80px;
+  padding: 0 clamp(14px, 4vw, 40px) clamp(64px, 6vw, 80px);
 }
 
 /* Top nav */
@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   gap: 18px;
-  padding: 10px 40px;
+  padding: calc(10px + env(safe-area-inset-top)) clamp(14px, 4vw, 40px) 10px;
   z-index: 50;
   background: rgba(7, 10, 15, 0.72);
   backdrop-filter: blur(10px);
@@ -236,7 +236,7 @@
 .hero {
   position: relative;
   min-height: 100svh;
-  padding-top: 120px;
+  padding-top: clamp(100px, 10vw, 120px);
   display: grid;
   align-items: center;
 }
@@ -306,9 +306,9 @@
 
 .hero__title {
   margin: 0;
-  font-size: 70px;
-  line-height: 0.9;
-  letter-spacing: -3px;
+  font-size: clamp(32px, 6vw, 70px);
+  line-height: 0.95;
+  letter-spacing: clamp(-2.6px, -0.24vw, -1.2px);
 }
 
 .hero__amp {
@@ -322,7 +322,7 @@
   max-width: 880px;
   margin: 0;
   color: rgba(255, 255, 255, 0.84);
-  font-size: 18px;
+  font-size: clamp(16px, 1.35vw, 18px);
   line-height: 1.5;
 }
 
@@ -394,7 +394,7 @@
 
 /* Sections */
 .section {
-  padding: 80px 0;
+  padding: clamp(56px, 7vw, 80px) 0;
 }
 
 .reveal {
@@ -452,8 +452,8 @@
 
 .section__title {
   margin: 0;
-  font-size: 40px;
-  letter-spacing: -1.8px;
+  font-size: clamp(26px, 3.2vw, 40px);
+  letter-spacing: clamp(-1.8px, -0.18vw, -1px);
   line-height: 1.1;
 }
 
@@ -461,7 +461,7 @@
   max-width: 980px;
   margin: 0;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 18px;
+  font-size: clamp(16px, 1.35vw, 18px);
   line-height: 1.5;
 }
 
@@ -619,7 +619,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  height: 260px;
+  height: clamp(190px, 32vw, 260px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   transform: translateZ(0);
 }
@@ -798,7 +798,7 @@
 
 .footer__lets,
 .footer__talk {
-  font-size: 96px;
+  font-size: clamp(44px, 8vw, 96px);
   line-height: 0.8;
   letter-spacing: -0.06em;
   font-weight: 900;
