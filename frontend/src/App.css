@@ -1,12 +1,15 @@
 .app {
   min-height: 100svh;
   color: rgba(255, 255, 255, 0.92);
+  overflow-x: hidden;
 }
 
 .page {
   width: min(1400px, 100%);
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 clamp(14px, 4vw, 40px) clamp(64px, 6vw, 80px);
+  box-sizing: border-box;
 }
 
 /* Top nav */

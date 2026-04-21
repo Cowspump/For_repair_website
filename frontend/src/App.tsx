@@ -3,13 +3,11 @@ import './App.css'
 import reactLogo from './assets/react.svg'
 
 function App() {
-  const aboutImageUrl =
-    'https://images.unsplash.com/photo-1581578017424-0cfea7e49b1c?auto=format&fit=crop&w=1800&q=80'
+  const aboutImageUrl = '/images/about.jpg'
   const serviceImages = {
-    ac: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1800&q=80',
-    maint:
-      'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1800&q=80',
-    elec: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1800&q=80',
+    ac: '/images/service-ac.jpg',
+    maint: '/images/service-maint.jpg',
+    elec: '/images/service-elec.jpg',
   }
 
   const sections = useMemo(
